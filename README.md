@@ -46,4 +46,7 @@ terraform apply --auto-approve
 ```
 
 
-7. 
+7. After terraform completes, your new Boundary host catalog, RDS instances and/or EKS clusters will be added as hosts in Boundary.
+![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_14-16-07.png)
+   
+ 
