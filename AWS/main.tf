@@ -56,7 +56,7 @@ resource "boundary_host_static" "rds" {
 
 ### RETREIVE AWS EKS CLUSTERS ###
 
-# Retrieving the list of EKS clusters. Unlike RDS, there's no tags on this resource, so you cannot specify which 
+# Retrieving the list of EKS clusters. Unlike RDS, there's no tags on this data source, so you cannot specify which 
 # EKS cluster to retreive. It will retrieve all EKS clusters.
 data "aws_eks_clusters" "eks" {}
 
