@@ -21,7 +21,7 @@ This repo assumes you have:
 
 ```
 git clone https://github.com/vanphan24/boundary-terraform-host-discovery.git
-cd boundary-terraform-host-discovery
+cd boundary-terraform-host-discovery/AWS
 ```
 
 3. Update the variable.tf file with the settings that match your environment. 
