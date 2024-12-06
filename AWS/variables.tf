@@ -1,4 +1,4 @@
-t variable "aws_region" {
+variable "aws_region" {
   description = "region of my rds database instances"
   type        = string
   default     = "us-east-2" # CHANGE VALUE TO MATCH YOUR REGION
