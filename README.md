@@ -17,7 +17,7 @@ This repo assumes you have:
 
 
 
-2. Clone repo and navigate into the `boundary-terraform-host-discovery` folder.
+2. On your local machine terminal, clone repo and navigate into the `boundary-terraform-host-discovery` folder.
 
 ```
 git clone https://github.com/vanphan24/boundary-terraform-host-discovery.git
