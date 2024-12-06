@@ -2,11 +2,13 @@
 # SPDX-License-Identifier: MPL-2.0
 
 terraform {
+  /*  Remove comment if using HCP Terraform 
   cloud {
     workspaces {
-      name = "Boundary-discover-rds"
+      name = "Boundary-discover-hosts"
     }
   }
+  */
 
   required_providers {
     aws = {
