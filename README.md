@@ -17,33 +17,33 @@ This repo assumes you have:
 
 
 
-1. Clone repo and navigate into the `boundary-terraform-host-discovery` folder.
+2. Clone repo and navigate into the `boundary-terraform-host-discovery` folder.
 
 ```
 git clone https://github.com/vanphan24/boundary-terraform-host-discovery.git
 cd boundary-terraform-host-discovery
 ```
 
-2. Update the variable.tf file with the settings that match your environment. 
+3. Update the variable.tf file with the settings that match your environment. 
 
-2. Run terraform init.
+4. Run terraform init.
 
 ```
 terraform init
 ```
 
 
-3. Run terraform plan.
+5. Run terraform plan.
 
 ```
 terraform plan
 ```
 
-4. Run terraform apply.
+6. Run terraform apply.
 
 ```
 terraform apply --auto-approve 
 ```
 
 
-5. 
+7. 
