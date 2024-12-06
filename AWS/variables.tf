@@ -7,13 +7,13 @@ variable "aws_region" {
 variable "boundary_addr" {
   description = "boundary cluster address"
   type        = string
-  default     = "https://7a677e2c-ed79-4ff1-b760-708c9b5901e9.boundary.hashicorp.cloud/" # CHANGE VALUE TO MATCH YOUR CLUSTER
+  default     = "https://7a677e2c-ed79-4ff1-b760-123456789.boundary.hashicorp.cloud/" # CHANGE VALUE TO MATCH YOUR CLUSTER URL
 }
 
 variable "boundary_scope_id" {
   description = "Scope for new host catalog"
   type        = string
-  default     = "p_mbpTEENkKs" # CHANGE VALUE TO MATCH YOUR SCOPE
+  default     = "p_mbp1234567" # CHANGE VALUE TO MATCH YOUR SCOPE
 }
 
 variable "boundary_auth_method_id" {
