@@ -11,7 +11,7 @@ This repo assumes you have:
 # Instructions:
 
 1. Go to your AWS RDS instances and add a tag to any RDS instance you wish to be discovered by Boundary.  
-   The tag name should be `boundary` and the value should be `true`
+   The tag name should be `boundary` and the value should be `true`  
    Terraform will search RDS and will only add RDS instances with matching tags. For EKS instance, terraform will added all EKS clusters since the [aws_eks_clusters](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_clusters) data source provider does not have an tag filed to filter based on tags.
 ![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_12-16-59.png)
 
