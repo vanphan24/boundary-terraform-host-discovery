@@ -1,4 +1,4 @@
-variable "aws_region" {
+t variable "aws_region" {
   description = "region of my rds database instances"
   type        = string
   default     = "us-east-2" # CHANGE VALUE TO MATCH YOUR REGION
@@ -11,7 +11,7 @@ variable "boundary_addr" {
 }
 
 variable "boundary_scope_id" {
-  description = "Scope for new host catalog"
+  description = "Project scope ID for new host catalog"
   type        = string
   default     = "p_mbp1234567" # CHANGE VALUE TO MATCH YOUR SCOPE
 }
