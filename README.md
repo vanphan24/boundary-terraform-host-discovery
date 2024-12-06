@@ -10,7 +10,8 @@ This repo assumes you have:
 
 # Instructions:
 
-1. Go to your AWS RDS instances and add a tag to any RDS instance you wish to be discovered by Boundary. The tag should be 
+1. Go to your AWS RDS instances and add a tag to any RDS instance you wish to be discovered by Boundary.
+   The tag should be boundary = true
 ![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_12-16-59.png)
 
 
