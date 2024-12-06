@@ -1,5 +1,5 @@
 # boundary-terraform-target-discovery-aws
-This repo will use Terraform to auto-discover RDS database instances and AWS Kubernetes Service (AKS) clusters in AWS and automatically add them to Boundary's host catalog
+This repo will use Terraform to auto-discover RDS database instances and Elastic Kubernetes Service (EKS) clusters in AWS and automatically add them to Boundary's host catalog
 
 # Pre-reqs
 
@@ -12,7 +12,7 @@ This repo assumes you have:
 
 1. Go to your AWS RDS instances and add a tag to any RDS instance you wish to be discovered by Boundary.  
    The tag name should be `boundary` and the value should be `true`
-   Terraform will search RDS and will only add RDS instances with matching tags. For AKS instance, terraform will added all AKS clusters since there are no tags available in AKS.
+   Terraform will search RDS and will only add RDS instances with matching tags. For EKS instance, terraform will added all EKS clusters since the [aws_eks_clusters](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_clusters) data source provider does not have an tag filed to filter based on tags.
 ![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_12-16-59.png)
 
 
@@ -44,10 +44,6 @@ terraform plan
 ```
 terraform apply --auto-approve 
 ```
-Optionally, apply username and password on command line:
 
-```
-terraform apply -var boundary_login_name=<YOUR LOGIN> -var boundary_password=<YOUR PASSWORD> -auto-approve 
-```
 
 5. 
