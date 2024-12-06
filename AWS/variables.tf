@@ -16,6 +16,14 @@ variable "boundary_scope_id" {
   default     = "p_mbpTEENkKs" # CHANGE VALUE TO MATCH YOUR SCOPE
 }
 
+variable "boundary_auth_method_id" {
+  description = "boundary auth method ID"
+  type        = string
+  default     = "ampw_1234567" # CHANGE VALUE TO MATCH YOUR AUTH METHOD ID
+  sensitive = true
+}
+
+
 variable "boundary_login_name" {
   description = "boundary username"
   type        = string
@@ -26,7 +34,7 @@ variable "boundary_login_name" {
 variable "boundary_password" {
   description = "boundary password"
   type        = string
-  default     = "" # CHANGE VALUE TO MATCH YOUR PASSWORD
+  default     = "my-password-1234" # CHANGE VALUE TO MATCH YOUR PASSWORD
   sensitive = true
 }
 
