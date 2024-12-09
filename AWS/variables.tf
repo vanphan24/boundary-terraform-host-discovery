@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "region of my rds database instances"
   type        = string
-  default     = "us-east-2" # CHANGE VALUE TO MATCH YOUR REGION
+  default     = "us-east-2" # CHANGE VALUE TO MATCH YOUR AWS REGION
 }
 
 variable "boundary_addr" {
