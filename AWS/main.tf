@@ -18,8 +18,8 @@ provider "boundary" {
 ### CREATE NEW BOUNDARY HOST CATALOG ###
 
 resource "boundary_host_catalog_static" "rds" {
-  name        = "My new host catalog"
-  description = "My new host catalog via Terraform!"
+  name        = "My new AWS host catalog"
+  description = "My new AWS host catalog via Terraform!"
   scope_id    = var.boundary_scope_id
 }
 
