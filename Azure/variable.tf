@@ -16,7 +16,7 @@ variable "boundary_addr" {
 variable "boundary_scope_id" {
   description = "Project scope for new host catalog"
   type        = string
-  default     = "p_mbp123456" # CHANGE VALUE TO MATCH YOUR SCOPE
+  default     = "p_mbp123456" # CHANGE VALUE TO MATCH YOUR PROJECT SCOPE
 }
 
 variable "boundary_auth_method_id" {
