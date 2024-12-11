@@ -65,43 +65,52 @@ terraform apply --auto-approve
    terraform destroy --auto-apply
    ```
 
+
+
+            
 # Instructions for Azure resources:
 
-1. On your local machine terminal, clone repo and navigate into the `boundary-terraform-host-discovery` folder.
+1. Log onto Azure from your local machine terminal.
+
+```
+az login --tenant <your-tenant-id>
+```
+   
+2. On your local machine terminal, clone repo and navigate into the `boundary-terraform-host-discovery` folder.
 
 ```
 git clone https://github.com/vanphan24/boundary-terraform-host-discovery.git
 cd boundary-terraform-host-discovery/Azure
 ```
 
-2. Update the `variable.tf` file with the settings that match your environment. 
+3. Update the `variable.tf` file with the settings that match your environment. 
 
-3. Run terraform init.
+4. Run terraform init.
 
 ```
 terraform init
 ```
 
 
-4. Run terraform plan.
+5. Run terraform plan.
 
 ```
 terraform plan
 ```
 
-5. Run terraform apply.
+6. Run terraform apply.
 
 ```
 terraform apply --auto-approve 
 ```
 
 
-6. After terraform completes, your new Boundary host catalog, RDS instances and/or EKS clusters will be added as hosts in Boundary.
+7. After terraform completes, your new Boundary host catalog, RDS instances and/or EKS clusters will be added as hosts in Boundary.
 ![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_14-16-07.png)
 
 ### Clean-up
 
-7. Remove host catalog and RDS/EKS resources from Boundary.
+8. Remove host catalog and RDS/EKS resources from Boundary.
 
    ```
    terraform destroy --auto-apply
