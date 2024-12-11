@@ -27,7 +27,7 @@ variable "boundary_auth_method_id" {
 variable "boundary_login_name" {
   description = "boundary username"
   type        = string
-  default     = "admin" # CHANGE VALUE TO MATCH YOUR LOGIN
+  default     = "my-admin-username" # CHANGE VALUE TO MATCH YOUR LOGIN
   sensitive = true
 }
 
