@@ -1,14 +1,22 @@
 # boundary-terraform-target-discovery-aws
-This repo will use Terraform to auto-discover RDS database instances and Elastic Kubernetes Service (EKS) clusters in AWS and automatically add them to Boundary's host catalog
+This repo will use Terraform to auto-discover AWS and Azure resources and automatically add them your existing Boundar cluster's host catalog. Resources include:
+- AWS RDS database instances. (RDS instances that are tagged will be discovered)
+- Elastic Kubernetes Service (EKS) clusters. 
+- Azure postgres database servers.
+- Azure mysql database servers.
+- Azure AKS clusters.
+
+You can add your additional resources to be discovered using the same data source from the [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) and the [Azapi provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs/data-sources/resource_list). 
+  
 
 # Pre-reqs
 
 This repo assumes you have: 
 1. An existing Boundary cluster deployed.
-2. Access and permissions to view AWS resouces, like RDS and AKS.
+2. Access and permissions to view AWS and Azure resouces, like RDS, EKS, AKS, etc.
 3. [Terraform installed](https://developer.hashicorp.com/terraform/install) locally on your machine. Terraform Cloud (HCP Terraform) is optional.
 
-# Instructions:
+# Instructions for AWS resources:
 
 1. Go to your AWS RDS instances and add a tag to any RDS instance you wish to be discovered by Boundary.  
    The tag name should be `boundary` and the value should be `true`  
@@ -24,7 +32,7 @@ git clone https://github.com/vanphan24/boundary-terraform-host-discovery.git
 cd boundary-terraform-host-discovery/AWS
 ```
 
-3. Update the variable.tf file with the settings that match your environment. 
+3. Update the `variable.tf` file with the settings that match your environment. 
 
 4. Run terraform init.
 
@@ -48,10 +56,52 @@ terraform apply --auto-approve
 
 7. After terraform completes, your new Boundary host catalog, RDS instances and/or EKS clusters will be added as hosts in Boundary.
 ![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_14-16-07.png)
-   
-## Clean-up
 
-1. Remove host catalog and RDS/EKS resources from Boundary.
+### Clean-up
+
+8. Remove host catalog and RDS/EKS resources from Boundary.
+
+   ```
+   terraform destroy --auto-apply
+   ```
+
+# Instructions for Azure resources:
+
+1. On your local machine terminal, clone repo and navigate into the `boundary-terraform-host-discovery` folder.
+
+```
+git clone https://github.com/vanphan24/boundary-terraform-host-discovery.git
+cd boundary-terraform-host-discovery/Azure
+```
+
+2. Update the `variable.tf` file with the settings that match your environment. 
+
+3. Run terraform init.
+
+```
+terraform init
+```
+
+
+4. Run terraform plan.
+
+```
+terraform plan
+```
+
+5. Run terraform apply.
+
+```
+terraform apply --auto-approve 
+```
+
+
+6. After terraform completes, your new Boundary host catalog, RDS instances and/or EKS clusters will be added as hosts in Boundary.
+![image](https://github.com/vanphan24/boundary-terraform-host-discovery/blob/main/images/2024-12-06_14-16-07.png)
+
+### Clean-up
+
+7. Remove host catalog and RDS/EKS resources from Boundary.
 
    ```
    terraform destroy --auto-apply
