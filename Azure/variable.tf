@@ -1,7 +1,7 @@
 variable "azure_subscription" {
   description = "My azure subscription"
   type        = string
-  default     = "1a2b542d-3d8b-478b-9823-1c3a014c25b4" # CHANGE VALUE TO MATCH YOUR AZURE SUB
+  default     = "123456-3d8b-478b-9823-1c3a012345678" # CHANGE VALUE TO MATCH YOUR AZURE SUB
 }
 
 
