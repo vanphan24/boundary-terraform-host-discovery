@@ -17,7 +17,7 @@ provider "boundary" {
 
 ### CREATE NEW BOUNDARY HOST CATALOG ###
 
-resource "boundary_host_catalog_static" "rds" {
+resource "boundary_host_catalog_static" "my_host_catalog_aws" {
   name        = "My new AWS host catalog"
   description = "My new AWS host catalog via Terraform!"
   scope_id    = var.boundary_scope_id
@@ -48,7 +48,7 @@ resource "boundary_host_static" "rds" {
   name            = each.key
   description     = " AWS RDS ${each.value.engine} added via TF. "
   address         = each.value.address
-  host_catalog_id = boundary_host_catalog_static.rds.id
+  host_catalog_id = boundary_host_catalog_static.my_host_catalog_aws.id
   for_each = data.aws_db_instance.database
 }
 
@@ -72,6 +72,6 @@ resource "boundary_host_static" "eks" {
   name            = each.key
   description     = " AWS EKS ${each.value.arn} added via TF. "
   address         = trim(each.value.endpoint, "https://")
-  host_catalog_id = boundary_host_catalog_static.rds.id
+  host_catalog_id = boundary_host_catalog_static.my_host_catalog_aws.id
   for_each = data.aws_eks_cluster.eks
 }
