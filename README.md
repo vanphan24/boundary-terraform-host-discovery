@@ -1,4 +1,4 @@
-# boundary-terraform-target-discovery-aws
+# boundary-terraform-target-discovery
 This repo will use Terraform to auto-discover AWS and Azure resources and automatically add them your existing Boundar cluster's host catalog. Resources include:
 - AWS RDS database instances. (RDS instances that are tagged will be discovered)
 - AWS Elastic Kubernetes Service (EKS) clusters. 
