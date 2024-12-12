@@ -7,7 +7,8 @@ This repo will use Terraform to auto-discover AWS and Azure resources and automa
 - Azure AKS clusters.
 
 You can add your additional resources to be discovered using the same data source from the [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) and the [Azapi provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs/data-sources/resource_list). 
-  
+
+(Big shout out to Cole Morrison and Benjamin Lykins for help with this!)
 
 # Pre-reqs
 
